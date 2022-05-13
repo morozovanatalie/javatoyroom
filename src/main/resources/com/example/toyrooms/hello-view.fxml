@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="210.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toyrooms.HelloController">
+    <children>
+        <Label layoutX="67.0" layoutY="14.0" text="Выберите роль">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+        <Button fx:id="btn_admin" layoutX="78.0" layoutY="73.0" prefHeight="38.0" prefWidth="145.0" text="Администратор">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+        <Button fx:id="btn_user" layoutX="78.0" layoutY="139.0" prefHeight="38.0" prefWidth="145.0" text="Пользователь">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

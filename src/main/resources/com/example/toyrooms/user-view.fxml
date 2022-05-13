@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toyrooms.UserView">
+    <children>
+        <HBox prefHeight="37.0" prefWidth="900.0">
+             <children>
+                 <Label prefWidth="180.0">
+                     <font>
+                         <Font size="16.0" />
+                     </font></Label>
+                     <Button fx:id="sort_toys" onAction="#handleClicks" prefWidth="180.0" text="Сортировка игрушек">
+                          <font>
+                              <Font size="16.0" />
+                          </font></Button>
+                 <Button fx:id="find_toys" onAction="#handleClicks" prefWidth="180.0" text="Найти игрушку">
+                     <font>
+                         <Font size="16.0" />
+                     </font></Button>
+                     <Button fx:id="change_role" prefWidth="180.0" text="Поменять роль">
+                          <font>
+                              <Font size="16.0" />
+                          </font></Button>
+                 <Label prefWidth="180.0">
+                     <font>
+                         <Font size="16.0" />
+                     </font></Label>
+             </children></HBox>
+
+             <Pane layoutY="37.0" prefHeight="563.0" prefWidth="300.0">
+                     <children>
+                         <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Комнаты">
+                             <font>
+                                 <Font size="20.0" />
+                             </font></Label>
+                         <HBox layoutY="40" prefHeight="30.0" prefWidth="300.0">
+                        <children>
+                           <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Название" textAlignment="CENTER">
+                              <font>
+                                 <Font size="15.0" />
+                              </font></Label>
+                           <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Возраст" textAlignment="CENTER">
+                              <font>
+                                 <Font size="15.0" />
+                              </font></Label>
+                           <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Игрушек" textAlignment="CENTER">
+                              <font>
+                                 <Font size="15.0" />
+                              </font></Label>
+                           <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Стоимость" textAlignment="CENTER">
+                              <font>
+                                 <Font size="15.0" />
+                              </font></Label>
+                        </children></HBox>
+                         <ScrollPane fx:id="rooms" layoutY="70.0" prefHeight="493.0" prefWidth="300.0">
+                             <content>
+                                 <VBox fx:id="vrooms" />
+                             </content>
+                         </ScrollPane>
+                     </children></Pane>
+
+                 <Pane layoutX="300.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0">
+                     <children>
+                         <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Игрушки">
+                             <font>
+                                 <Font size="20.0" />
+                             </font></Label>
+                             <HBox layoutY="40" prefHeight="30.0" prefWidth="300.0">
+                                <children>
+                                   <Label alignment="CENTER" prefHeight="30" prefWidth="100.00" text="Размер" textAlignment="CENTER">
+                                      <font>
+                                         <Font size="15.0" />
+                                      </font></Label>
+                                   <Label alignment="CENTER" prefHeight="30" prefWidth="100.00" text="Название" textAlignment="CENTER">
+                                      <font>
+                                         <Font size="15.0" />
+                                      </font></Label>
+                                   <Label alignment="CENTER" prefHeight="30" prefWidth="100.00" text="Стоимость" textAlignment="CENTER">
+                                      <font>
+                                         <Font size="15.0" />
+                                      </font></Label>
+                                </children></HBox>
+                         <ScrollPane fx:id="toys" layoutY="70.0" prefHeight="493.0" prefWidth="300.0">
+                             <content>
+                                 <VBox fx:id="vtoys" />
+                             </content>
+                         </ScrollPane>
+                     </children></Pane>
+
+            <Pane fx:id="pn_find_toys" layoutX="600.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0" visible="false">
+                     <children>
+                         <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Найти игрушки">
+                             <font>
+                                 <Font size="20.0" />
+                             </font></Label>
+                         <Label layoutX="15.0" layoutY="55.0" text="Название игрушки:">
+                             <font>
+                                 <Font size="15.0" />
+                             </font></Label>
+                         <RadioButton fx:id="car" layoutX="15.0" layoutY="80.0" mnemonicParsing="false" text="Машинка">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <RadioButton fx:id="ball" layoutX="15.0" layoutY="115.0" mnemonicParsing="false" text="Мячик">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <RadioButton fx:id="doll" layoutX="170.0" layoutY="80.0" mnemonicParsing="false" text="Кукла">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <RadioButton fx:id="cube" layoutX="170.0" layoutY="115.0" mnemonicParsing="false" text="Кубик">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <Label layoutX="15.0" layoutY="145.0" text="Размер игрушки:">
+                             <font>
+                                 <Font size="15.0" />
+                             </font></Label>
+                         <RadioButton fx:id="small" layoutX="15.0" layoutY="175.0" mnemonicParsing="false" text="Маленький">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <RadioButton fx:id="medium" layoutX="110.0" layoutY="175.0" mnemonicParsing="false" text="Средний">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <RadioButton fx:id="big" layoutX="195.0" layoutY="175.0" mnemonicParsing="false" text="Большой">
+                             <font>
+                                 <Font size="13.0" />
+                             </font></RadioButton>
+                         <Button fx:id="btn_find" layoutX="195.0" layoutY="210.0" prefHeight="31.0" prefWidth="75.0" text="Найти" textAlignment="CENTER">
+                             <font>
+                                 <Font size="15.0" />
+                             </font></Button>
+                        <ScrollPane fx:id="found_toys" layoutX="15.0" layoutY="261.0" prefHeight="285.0" prefWidth="270.0" visible="false">
+                            <content>
+                                 <VBox fx:id="ftoys" />
+                             </content></ScrollPane>
+                     </children></Pane>
+
+    </children>
+
+</AnchorPane>

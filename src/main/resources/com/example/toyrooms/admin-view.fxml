@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toyrooms.AdminView">
+
+    <children>
+      <HBox prefHeight="37.0" prefWidth="900.0">
+         <children>
+             <Button fx:id="add_room" onAction="#handleClicks" prefWidth="180.0" text="Добавить комнату">
+                 <font>
+                     <Font size="16.0" />
+                 </font></Button>
+             <Button fx:id="delete_room" onAction="#handleClicks" prefWidth="180.0" text="Удалить комнату">
+                 <font>
+                     <Font size="16.0" />
+                 </font></Button>
+             <Button fx:id="add_toy" onAction="#handleClicks" prefWidth="180.0" text="Добавить игрушку">
+                 <font>
+                     <Font size="16.0" />
+                 </font></Button>
+             <Button fx:id="delete_toy" onAction="#handleClicks" prefWidth="180.0" text="Удалить игрушку">
+                 <font>
+                     <Font size="16.0" />
+                 </font></Button>
+             <Button fx:id="change_role" prefWidth="180.0" text="Поменять роль">
+                 <font>
+                     <Font size="16.0" />
+                 </font></Button>
+         </children></HBox>
+
+        <Pane layoutY="37.0" prefHeight="563.0" prefWidth="300.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Комнаты">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Label>
+                <HBox layoutY="40" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Название" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Возраст" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Игрушек" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" prefHeight="30" prefWidth="75.00" text="Стоимость" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+               </children></HBox>
+                <ScrollPane fx:id="rooms" layoutY="70.0" prefHeight="493.0" prefWidth="300.0">
+                    <content>
+                        <VBox fx:id="vrooms" />
+                    </content>
+                </ScrollPane>
+            </children></Pane>
+
+        <Pane layoutX="300.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Игрушки">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Label>
+                    <HBox layoutY="40" prefHeight="30.0" prefWidth="300.0">
+                       <children>
+                          <Label alignment="CENTER" prefHeight="30" prefWidth="100.00" text="Размер" textAlignment="CENTER">
+                             <font>
+                                <Font size="15.0" />
+                             </font></Label>
+                          <Label alignment="CENTER" prefHeight="30" prefWidth="100.00" text="Название" textAlignment="CENTER">
+                             <font>
+                                <Font size="15.0" />
+                             </font></Label>
+                          <Label alignment="CENTER" prefHeight="30" prefWidth="100.00" text="Стоимость" textAlignment="CENTER">
+                             <font>
+                                <Font size="15.0" />
+                             </font></Label>
+                       </children></HBox>
+                <ScrollPane fx:id="toys" layoutY="70.0" prefHeight="493.0" prefWidth="300.0">
+                    <content>
+                        <VBox fx:id="vtoys" />
+                    </content>
+                </ScrollPane>
+            </children></Pane>
+
+      <Pane fx:id="pn_add_room" layoutX="600.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0" visible="false">
+         <children>
+             <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Добавить комнату">
+                 <font>
+                     <Font size="20.0" />
+                 </font></Label>
+             <Label layoutX="15.0" layoutY="55.0" prefHeight="21.0" prefWidth="270.0" text="Название комнаты:">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+             <TextField fx:id="room_name" layoutX="15.0" layoutY="85.0" prefHeight="31.0" prefWidth="270.0">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+             <Label layoutX="15.0" layoutY="125.0" text="Возраст детей (2–12):">
+                 <font>
+                     <Font size="15.0" />
+                 </font></Label>
+             <TextField fx:id="room_age" layoutX="15.0" layoutY="155.0" prefHeight="31.0" prefWidth="270.0">
+                 <font>
+                     <Font size="13.0" />
+                 </font></TextField>
+             <Label layoutX="15.0" layoutY="195.0" text="Общая стоимость комнаты:">
+                 <font>
+                     <Font size="15.0" />
+                 </font></Label>
+             <TextField fx:id="room_cost" layoutX="15.0" layoutY="225.0" prefHeight="31.0" prefWidth="270.0">
+                 <font>
+                     <Font size="13.0" />
+                 </font></TextField>
+             <Button fx:id="btn_add_room" layoutX="199.0" layoutY="270.0" text="Добавить" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children></Pane>
+
+        <Pane fx:id="pn_dlt_room" layoutX="600.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0" visible="false">
+            <children>
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Удалить комнату">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Label>
+                <Label layoutX="15.0" layoutY="55.0" prefHeight="21.0" prefWidth="270.0" text="Название комнаты:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <TextField fx:id="room_dlt_name" editable="false" layoutX="15.0" layoutY="85.0" prefHeight="31.0" prefWidth="270.0" > <!--text="Выберите комнату в списке"-->
+                    <font>
+                        <Font size="13.0" />
+                    </font></TextField>
+                <Label layoutX="15.0" layoutY="125.0" text="Возраст детей:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <TextField fx:id="room_dlt_age" editable="false" layoutX="15.0" layoutY="155.0" prefHeight="31.0" prefWidth="270.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font></TextField>
+                <Label layoutX="15.0" layoutY="195.0" text="Общая стоимость комнаты:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <TextField fx:id="room_dlt_cost" editable="false" layoutX="15.0" layoutY="225.0" prefHeight="31.0" prefWidth="270.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font></TextField>
+                <Label layoutX="15.0" layoutY="265.0" text="Количество игрушек в комнате:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <TextField fx:id="room_dlt_toy_amount" editable="false" layoutX="15.0" layoutY="295.0" prefHeight="31.0" prefWidth="270.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font></TextField>
+                <Button fx:id="btn_dlt_room" layoutX="199.0" layoutY="340.0" text="Удалить" prefWidth="86.00" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Button>
+            </children></Pane>
+
+        <Pane fx:id="pn_add_toy" layoutX="600.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0" visible="false">
+            <children>
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Добавить игрушку">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Label>
+                <Label layoutX="15.0" layoutY="55.0" prefHeight="21.0" prefWidth="270.0" text="Название комнаты:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <TextField fx:id="add_toy_room_name" editable="false" layoutX="15.0" layoutY="85.0" prefHeight="31.0" prefWidth="270.0" text="Выберите комнату в списке">
+                    <font>
+                        <Font size="13.0" />
+                    </font></TextField>
+                <Label layoutX="15.0" layoutY="125.0" text="Название игрушки:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <RadioButton fx:id="car" layoutX="15.0" layoutY="155.0" mnemonicParsing="false" text="Машинка">
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <RadioButton fx:id="ball" layoutX="15.0" layoutY="190.0" mnemonicParsing="false" text="Мячик" >
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <RadioButton fx:id="doll" layoutX="170.0" layoutY="155.0" mnemonicParsing="false" text="Кукла">
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <RadioButton fx:id="cube" layoutX="170.0" layoutY="190.0" mnemonicParsing="false" text="Кубик">
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <Label layoutX="15.0" layoutY="220.0" text="Размер игрушки:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <RadioButton fx:id="small" layoutX="15.0" layoutY="250.0" mnemonicParsing="false" text="Маленький">
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <RadioButton fx:id="medium" layoutX="110.0" layoutY="250.0" mnemonicParsing="false" text="Средний">
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <RadioButton fx:id="big" layoutX="195.0" layoutY="250.0" mnemonicParsing="false" text="Большой">
+                    <font>
+                        <Font size="13.0" />
+                    </font></RadioButton>
+                <Label layoutX="15.0" layoutY="280.0" text="Стоимость игрушки:">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Label>
+                <TextField fx:id="toy_cost" layoutX="15.0" layoutY="310.0" prefHeight="31.0" prefWidth="270.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font></TextField>
+                <Button fx:id="btn_add_toy" layoutX="199.0" layoutY="355.0" text="Добавить" textAlignment="CENTER">
+                    <font>
+                        <Font size="15.0" />
+                    </font></Button>
+            </children></Pane>
+
+            <Pane fx:id="pn_dlt_toy" layoutX="600.0" layoutY="37.0" prefHeight="563.0" prefWidth="300.0" visible="false" >
+                <children>
+                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="300.0" text="Удалить игрушку">
+                        <font>
+                            <Font size="20.0" />
+                        </font></Label>
+                    <Label layoutX="15.0" layoutY="55.0" prefHeight="21.0" prefWidth="270.0" text="Название комнаты:">
+                        <font>
+                            <Font size="15.0" />
+                        </font></Label>
+                    <TextField fx:id="toy_dlt_room_name" editable="false" layoutX="15.0" layoutY="85.0" prefHeight="31.0" prefWidth="270.0" text="Выберите комнату в списке">
+                        <font>
+                            <Font size="13.0" />
+                        </font></TextField>
+                    <Label layoutX="15.0" layoutY="125.0" text="Игушка:">
+                        <font>
+                            <Font size="15.0" />
+                        </font></Label>
+                    <TextField fx:id="toy_dlt_name" editable="false" layoutX="15.0" layoutY="155.0" prefHeight="31.0" prefWidth="270.0" text="Выберите игрушку в списке">
+                        <font>
+                            <Font size="13.0" />
+                        </font></TextField>
+                    <Label layoutX="15.0" layoutY="195.0" text="Стоимость игрушки:">
+                        <font>
+                            <Font size="15.0" />
+                        </font></Label>
+                    <TextField fx:id="toy_dlt_cost" editable="false" layoutX="15.0" layoutY="225.0" prefHeight="31.0" prefWidth="270.0">
+                        <font>
+                            <Font size="13.0" />
+                        </font></TextField>
+                    <Button fx:id="btn_dlt_toy" layoutX="199.0" layoutY="270.0" text="Удалить" prefWidth="86.00" textAlignment="CENTER">
+                        <font>
+                            <Font size="15.0" />
+                        </font></Button>
+                </children></Pane>
+    </children>
+
+</AnchorPane>
